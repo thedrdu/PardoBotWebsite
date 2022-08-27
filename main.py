@@ -8,6 +8,6 @@ app = Flask(__name__)
 def home():
     return render_template("index.html", title="Home")
 
-@app.route('/help')
+@app.route('/features')
 def help():
-    return render_template("help.html", title="Help")
+    return render_template("features.html", title="Features")

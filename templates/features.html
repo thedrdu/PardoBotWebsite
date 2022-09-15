@@ -3,8 +3,8 @@
 {% block content %}
   <body style="background-color: 424549;">
 
-    <div style="background-color: #f9d8cc; padding-top: 75px; padding-bottom: 50px">
-      <p style="font-family: 'Righteous'; font-weight: bold; color: 705044; text-align: center; font-size:12vw;" class="w3-animate-bottom">Commands</p>
+    <div style="background-image: url(../static/images/svg.svg); padding-top: 75px; padding-bottom: 50px">
+      <p style="font-family: 'Righteous'; font-weight: bold; color: 705044; text-align: center; font-size:12vw;">Commands</p>
     </div>
 
     <p style="font-family: 'Righteous'; font-weight: bold; color: white; text-align: center; font-size:64px;">Honkai</p>
@@ -36,6 +36,8 @@
             Usage: <code>/confignews {channel}</code>
             <br>
             Configures the news channel in the guild the command is run in to the specified channel.
+            <br>
+            <img src="../static/images/news_video.png" style="display: block; width: 50%; height: 62%; margin-left: auto; margin-right: auto; padding-top: 15px;" alt="Vill-V wikisearch">
           </div>
         </div>
       </div>
@@ -53,7 +55,81 @@
           </div>
         </div>
       </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <code>/wikisearch</code>
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#honkai_commands">
+          <div class="accordion-body">
+            Usage: <code>/wikisearch {query}</code>
+            <br>
+            Links the top result on the Honkai Impact 3rd wikia, along with a short preview of its contents.
+            <br>
+            <img src="../static/images/vill_v_wikisearch.png" style="display: block; width: 50%; height: 55%; margin-left: auto; margin-right: auto; padding-top: 15px;" alt="Vill-V wikisearch">
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            <code>/configstats</code>
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#honkai_commands">
+          <div class="accordion-body">
+            Usage: <code>/configstats {ltuid} {ltoken} {honkai uid}</code>
+            <br>
+            Configures your HoYoLAB account with PardoBot to allow her access to view your Honkai Impact 3rd stats. ENTER CAREFULLY!
+            <br><br>
+            Not sure how to get your ltuid and ltoken? Visit your HoYoLAB profile, right click > inspect element, and then search in storage!
+            <br>
+            <img src="../static/images/hoyolab_information.png" style="display: block; width: 70%; height: 60%; margin-left: auto; margin-right: auto; padding-top: 15px;" alt="HoYoLAB Information">
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSix">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+            <code>/stats</code>
+          </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#honkai_commands">
+          <div class="accordion-body">
+            Usage: <code>/stats</code>
+            <br>
+            Retrieves your Honkai Impact 3rd stats.
+            <br>
+            <img src="../static/images/stats.png" style="display: block; width: 45%; height: 40%; margin-left: auto; margin-right: auto; padding-top: 15px;" alt="/stats">
+          </div>
+        </div>
+      </div>
     </div>
 
+    <p style="font-family: 'Righteous'; font-weight: bold; color: white; text-align: center; font-size:64px; padding-top: 20px;">General</p>
+    <hr style="border-top: 8px solid #bbb; border-radius: 5px; margin-right: 25%; margin-left: 25%;">
+
+    <div class="accordion" id="general_commands" style="margin-right: 15%; margin-left: 15%;">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingHelp">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHelp" aria-expanded="true" aria-controls="collapseHelp">
+            <code>/help</code>
+          </button>
+        </h2>
+        <div id="collapseHelp" class="accordion-collapse collapse" aria-labelledby="headingHelp" data-bs-parent="#honkai_commands">
+          <div class="accordion-body">
+            Usage: <code>/help</code>
+            <br>
+            Returns a list of commands and short descriptions for each.
+            <br>
+            <img src="../static/images/help.png" style="display: block; width: 50%; height: 43%; margin-left: auto; margin-right: auto; padding-top: 15px;" alt="/stats">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="padding-bottom: 50px;"></div>
   </body>
 {% endblock %}

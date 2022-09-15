@@ -14,47 +14,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Bootstrap Overrides */
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus {
-    outline: none;
-    box-shadow: none;
-}
-.custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1.0)' stroke-width='0' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-.zoomin {
-  animation:grow 2.5s 1;
-
-}
-
-@keyframes grow {
-    0% {
-    transform: scale( 0 );-moz-transform: scale( 0 );-o-transform: scale( 0 );-ms-transform: scale( 0 );transform: scale( 0 );
-    }
-
-    100% {
-    transform: scale( 1 );-moz-transform: scale( 1 );-o-transform: scale( 1 );-ms-transform: scale( 1 );transform: scale( 1 );
-    }
-}
-
-
-.backgroundColorShift {
-    height: 100px;
-    background-color: #c5a599;
-    animation-name: backgroundColorShift; 
-    animation-delay: 0s;  
-    animation-duration: 1.5s; 
-    animation-fill-mode: forwards;
-}
-
-@keyframes backgroundColorShift {  
-    0% { background-color: #c5a599; }
-    100% { background-color: #f9d8cc; }
-}
-
 
 @font-face {
     font-family: "Righteous";
@@ -92,6 +51,7 @@ html {
 }
 
 
+
 ul {
 display: block;
 list-style-type: disc;
@@ -102,39 +62,6 @@ margin-right: 0px;
 padding-left: 0px;
 }
 
-.fade-in {
-    animation: fadeIn ease 1.5s;
-    -webkit-animation: fadeIn ease 1.5s;
-    -moz-animation: fadeIn ease 1.5s;
-    -o-animation: fadeIn ease 1.5s;
-    -ms-animation: fadeIn ease 1.5s;
-}
-@keyframes fadeIn {
-    0% {opacity:0;}
-    99% {visibility:hidden}
-    100% {opacity:1;visibility:visible}
-}
-
-@-moz-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;visibility:visible}
-}
-
-@-webkit-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;visibility:visible}
-}
-
-@-o-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;visibility:visible}
-}
-
-@-ms-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;visibility:visible}
-}
-
 .object {
     position: absolute;
     transition: all 2s ease-in-out;
@@ -143,12 +70,6 @@ padding-left: 0px;
     -o-transition: all 2s ease-in-out; /** Opera **/
 }
 
-.move-right{
-    transform: translate(350px,0);
-    -webkit-transform: translate(350px,0); /** Chrome & Safari **/
-    -o-transform: translate(350px,0); /** Opera **/
-    -moz-transform: translate(350px,0); /** Firefox **/
-}
 
 .title img:nth-child() {animation-delay: 1s}
 
@@ -194,44 +115,78 @@ iframe {
     border-radius: 10px;
 }
 
+/* ul li a {
+    scale: 1;
+	transition: scale 0.5s;
+}
+
+ul li a:hover {
+    scale: 1.5;
+    transition: scale 0.5s;
+} */
+  
+  .nav-link::before {
+    transition: 300ms;
+    height: 3px;
+    content: "";
+    position: absolute;
+    background-color: #031D44;
+  }
+  
+  .nav-link-ltr::before {
+    width: 0%;
+    bottom: 5px;
+  }
+  
+  .nav-link-ltr:hover::before {
+    width: 80px;
+  }
+
+  .nav-link-ltr2::before {
+    width: 0%;
+    bottom: 5px;
+  }
+  
+  .nav-link-ltr2:hover::before {
+    width: 75px;
+  }
+
+  .nav-link-ltr3::before {
+    width: 0%;
+    bottom: 5px;
+  }
+  
+  .nav-link-ltr3:hover::before {
+    width: 40px;
+  }
+/* 
 ul li a {
     color:white !important; 
     background-color: #000;    
-    transition: background-color 0.2s linear; /* vendorless fallback */
-    -o-transition: background-color 0.2s linear; /* opera */
-    -ms-transition: background-color 0.2s linear; /* IE 10 */
-    -moz-transition: background-color 0.2s linear; /* Firefox */
-    -webkit-transition: background-color 0.2s linear; /*safari and chrome */
+    transition: background-color 0.2s linear; 
+    -o-transition: background-color 0.2s linear; 
+    -ms-transition: background-color 0.2s linear; 
+    -moz-transition: background-color 0.2s linear; 
+    -webkit-transition: background-color 0.2s linear;
 }
-
+ 
 ul li a:hover {
     color: black !important;
     background-color: #fff;
     cursor: pointer;
-    transition: background-color 0.2s linear; /* vendorless fallback */
-    -o-transition: background-color 0.2s linear; /* opera */
-    -ms-transition: background-color 0.2s linear; /* IE 10 */
-    -moz-transition: background-color 0.2s linear; /* Firefox */
-    -webkit-transition: background-color 0.2s linear; /*safari and chrome */
-}
+    transition: background-color 0.2s linear;
+    -o-transition: background-color 0.2s linear; 
+    -ms-transition: background-color 0.2s linear; 
+    -moz-transition: background-color 0.2s linear;
+    -webkit-transition: background-color 0.2s linear;
+}  */
+
 
 .navbar-custom {
     height:175px;
 }
-/* 
+
 img.custom:hover {
     transition: .2s;
     transform: scale(1.15);
-}
-
-ul li a:hover img {
-    transition: .2s;
-    transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-} */
-
-ul li a img {
-    transition: .2s;
-    transform: scale(1);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-}
+} 

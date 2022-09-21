@@ -14,6 +14,11 @@ html {
     scroll-behavior: smooth;
 }
 
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Medium.ttf");
+    font-weight: medium;
+}
 
 @font-face {
     font-family: "Righteous";
@@ -125,49 +130,72 @@ ul li a:hover {
     transition: scale 0.5s;
 } */
   
-  .nav-link::before {
+.nav-link::before {
     transition: 300ms;
     height: 3px;
     content: "";
     position: absolute;
     background-color: #031D44;
-  }
+}
   
-  .nav-link-ltr::before {
+.nav-link-ltr::before {
     width: 0%;
     bottom: 5px;
-  }
+}
   
-  .nav-link-ltr:hover::before {
+.nav-link-ltr:hover::before {
     width: 80px;
-  }
+}
 
-  .nav-link-ltr2::before {
+.nav-link-ltr2::before {
     width: 0%;
     bottom: 5px;
-  }
+}
   
-  .nav-link-ltr2:hover::before {
+.nav-link-ltr2:hover::before {
     width: 75px;
-  }
+}
 
-  .nav-link-ltr3::before {
+.nav-link-ltr3::before {
     width: 0%;
     bottom: 5px;
-  }
+}
   
-  .nav-link-ltr3:hover::before {
+.nav-link-ltr3:hover::before {
     width: 40px;
-  }
+}
 
-  .nav-link-ltr4::before {
+.nav-link-ltr4::before {
     width: 0%;
     bottom: 5px;
-  }
+}
   
-  .nav-link-ltr4:hover::before {
+.nav-link-ltr4:hover::before {
     width: 50px;
-  }
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+.button {
+    background-color: #008CBA; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 48px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.3s;
+}
+  
+.button:hover {
+    background-color: #5CB85C;
+    color: white;
+}
 
 /* 
 ul li a {

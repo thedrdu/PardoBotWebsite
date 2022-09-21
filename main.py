@@ -14,6 +14,10 @@ def home():
 def help():
     return render_template("features.html", title="Features")
 
+@app.route('/support')
+def support():
+    return render_template("support.html", title="Support")
+
 @app.route('/favicon.ico') 
 def favicon(): 
     return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico')

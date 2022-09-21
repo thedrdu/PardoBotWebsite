@@ -159,6 +159,16 @@ ul li a:hover {
   .nav-link-ltr3:hover::before {
     width: 40px;
   }
+
+  .nav-link-ltr4::before {
+    width: 0%;
+    bottom: 5px;
+  }
+  
+  .nav-link-ltr4:hover::before {
+    width: 50px;
+  }
+
 /* 
 ul li a {
     color:white !important; 
